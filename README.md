@@ -40,3 +40,55 @@ I can  apply this structure to several domains:
 - Task management system
 - Recipe sharing platform
 
+## File Structure
+
+```bash
+project-root/
+│
+├── node_modules/
+├── src/
+│   ├── config/
+│   │   ├── database.js       # Database connection configuration
+│   │   ├── jwt.js            # JWT configuration settings
+│   │   └── environment.js    # Environment variables configuration
+│   │
+│   ├── controllers/
+│   │   ├── authController.js # Handles authentication logic
+│   │   └── userController.js # Handles user-related operations
+│   │
+│   ├── middlewares/
+│   │   ├── auth.js           # JWT verification middleware
+│   │   ├── errorHandler.js   # Global error handling
+│   │   └── validators.js     # Request validation middleware
+│   │
+│   ├── models/
+│   │   └── User.js           # User model definition
+│   │
+│   ├── routes/
+│   │   ├── auth.js           # Authentication routes
+│   │   ├── users.js          # User-related routes
+│   │   └── index.js          # Route aggregator
+│   │
+│   ├── services/
+│   │   ├── authService.js    # Authentication business logic
+│   │   └── emailService.js   # Email sending functionality
+│   │
+│   ├── utils/
+│   │   ├── logger.js         # Logging utility
+│   │   ├── passwordUtils.js  # Password hashing functions
+│   │   └── responseHelper.js # Standardized response formatting
+│   │
+│   └── app.js               # Express app initialization
+│
+├── tests/
+│   ├── integration/
+│   │   └── auth.test.js     # Integration tests for auth routes
+│   └── unit/
+│       └── authService.test.js # Unit tests for auth service
+│
+├── .env                     # Environment variables
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+
